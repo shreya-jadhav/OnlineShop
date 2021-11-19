@@ -13,9 +13,27 @@
         <a asp-action="Create" class="btn btn-info"><i class="fas fa-plus"></i>  Add New Product</a>
     </div>
 </div>
+
+<form method="post">
+    <div class="row">
+        <div class="col-3">
+            <input type="number" class="form-control" name="lowAmount" />
+        </div>
+        <div class="col-3">
+            <input type="number" class="form-control" name="largeAmount" />
+        </div>
+        <div class="col-3">
+            <input type="submit" value="search" class="btn btn-success" />
+        </div>
+        <div class="col-3"></div>
+
+    </div>
+
+</form>
+
 <br/>
 <div>
-    <table class="table table-striped border">
+    <table class="table table-striped border" id="myTable">
         <tr class="table-info">
             <th>
                 @Html.DisplayNameFor(expression:c=>c.Name)
